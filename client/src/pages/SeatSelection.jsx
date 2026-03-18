@@ -7,9 +7,9 @@ export default function SeatSelection() {
   const [loading, setLoading] = useState(true)
   const navigate = useNavigate()
 
-  // ✅ Fetch seats from backend
+  
   useEffect(() => {
-    fetch('http://localhost:5000/api/seats')
+    fetch(`${import.meta.env.VITE_API_URL}/api/seats`)
       .then(res => res.json())
       .then(data => {
         setSeats(data)
