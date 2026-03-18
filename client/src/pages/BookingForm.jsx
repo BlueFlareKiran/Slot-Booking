@@ -27,7 +27,7 @@ export default function BookingForm() {
   if (Object.keys(e).length) { setErrors(e); return }
 
   try {
-    const res = await fetch(`${import.meta.env.VITE_API_URL}api/seats/book`, {
+    const res = await fetch(`https://slot-booking-3724.onrender.com/api/seats/book`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
