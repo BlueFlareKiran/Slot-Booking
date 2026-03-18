@@ -6,7 +6,10 @@ import seatRoutes from './src/routes/seats.js'
 dotenv.config()
 
 const app = express()
-app.use(cors())
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://bus-slot.netlify.app/'],
+  methods: ['GET', 'POST'],
+}))
 app.use(express.json())
 
 app.use('/api/seats', seatRoutes)
