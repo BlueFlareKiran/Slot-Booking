@@ -9,7 +9,7 @@ export default function SeatSelection() {
 
   
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/seats`)
+    fetch(`${import.meta.env.VITE_API_URL}api/seats`)
       .then(res => res.json())
       .then(data => {
         setSeats(data)
